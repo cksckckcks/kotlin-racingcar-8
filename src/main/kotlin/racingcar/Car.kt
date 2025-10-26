@@ -9,4 +9,8 @@ class Car(
 
 	var position = START_DISTANCE
 		private set
+
+	fun moveForward() {
+		position++
+	}
 }
