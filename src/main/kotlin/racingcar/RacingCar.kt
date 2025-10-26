@@ -13,9 +13,11 @@ class RacingCar {
 		repeat(tryRound) {
 			roundStart(cars)
 			OutputView.printRoundResult(cars)
-
-			val winners = getWinner(cars)
 		}
+
+		val winners = getWinner(cars)
+
+		OutputView.printWinners(winners)
 	}
 
 	private fun roundStart(cars: List<Car>) {
