@@ -12,6 +12,7 @@ class RacingCar {
 	fun racingStart(cars: List<Car>, tryRound: Int) {
 		repeat(tryRound) {
 			roundStart(cars)
+			OutputView.printRoundResult(cars)
 		}
 	}
 
