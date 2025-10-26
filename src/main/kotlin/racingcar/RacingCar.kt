@@ -13,6 +13,8 @@ class RacingCar {
 		repeat(tryRound) {
 			roundStart(cars)
 			OutputView.printRoundResult(cars)
+
+			val winners = getWinner(cars)
 		}
 	}
 
@@ -23,5 +25,11 @@ class RacingCar {
 			if (randomNumber >= MIN_MOVE_VALUE)
 				car.moveForward()
 		}
+	}
+
+	private fun getWinner(cars: List<Car>): List<Car> {
+		val maxPosition = cars.maxOf { it.position }
+
+		return cars.filter { it.position == maxPosition }
 	}
 }
