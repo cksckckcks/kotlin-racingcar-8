@@ -1,5 +1,11 @@
 package racingcar
 
 fun main() {
-    val inputs = InputView.readInput()
+    val (inputMembers, inputTryCount) = InputView.readInput()
+
+    val members = InputParser.parseMembers(inputMembers)
+    val tryCount = InputParser.parseTryCount(inputTryCount)
+
+    InputValidator.validateMember(members)
+    InputValidator.validateTryCount(tryCount)
 }
