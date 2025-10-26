@@ -2,7 +2,7 @@ package racingcar
 
 object InputValidator {
     fun validateMember(memberList: List<String>){
-        val validatedMemberList = memberList.map { memberName ->
+        memberList.map { memberName ->
             when {
                 memberName.isEmpty() -> throw IllegalArgumentException("참가자 이름은 비어있을 수 없습니다.")
                 memberName.length > 5 -> throw IllegalArgumentException("참가자 이름은 5자 이하여야 합니다.")
