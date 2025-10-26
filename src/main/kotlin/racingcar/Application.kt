@@ -1,6 +1,8 @@
 package racingcar
 
 fun main() {
+	val racingCar = RacingCar()
+
 	val (inputMembers, inputTryCount) = InputView.readInput()
 
 	val members = InputParser.parseMembers(inputMembers)
@@ -12,4 +14,7 @@ fun main() {
 	val cars = members.map { name ->
 		Car(name)
 	}
+
+
+	racingCar.racingStart(cars, tryCount)
 }
