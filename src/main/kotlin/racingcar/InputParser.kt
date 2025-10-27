@@ -3,8 +3,8 @@ package racingcar
 object InputParser {
 	private const val DELIMITER = ","
 
-	fun parseMembers(members: String): List<String> {
-		return members.split(DELIMITER)
+	fun parseNames(inputNames: String): List<String> {
+		return inputNames.split(DELIMITER)
 	}
 
 	fun parseTryCount(inputTryCount: String): Int {

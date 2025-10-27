@@ -1,17 +1,17 @@
 package racingcar
 
 fun main() {
-	val (inputMembers, inputTryCount) = InputView.readInput()
+	val (inputNames, inputTryCount) = InputView.readInput()
 
-	val members = InputParser.parseMembers(inputMembers)
+	val names = InputParser.parseNames(inputNames)
 	val tryCount = InputParser.parseTryCount(inputTryCount)
 
-	InputValidator.validateMember(members)
+	InputValidator.validateName(names)
 	InputValidator.validateTryCount(tryCount)
 
-	val cars = members.map { name ->
+	val cars = names.map { name ->
 		Car(name)
 	}
-	
+
 	RacingCar.racingStart(cars, tryCount)
 }

@@ -64,7 +64,7 @@ class ApplicationTest : NsTest() {
 	fun `이름 파싱 테스트`() {
 		val input = "chan,hee,woo"
 
-		val members = InputParser.parseMembers(input)
+		val members = InputParser.parseNames(input)
 
 		assertThat(members).containsExactly("chan", "hee", "woo")
 	}
@@ -81,14 +81,14 @@ class ApplicationTest : NsTest() {
 	@Test
 	fun `이름 5글자 초과 예외 테스트`() {
 		assertThrows<IllegalArgumentException> {
-			InputValidator.validateMember(listOf("abcdef", "chan", "hi"))
+			InputValidator.validateName(listOf("abcdef", "chan", "hi"))
 		}
 	}
 
 	@Test
 	fun `이름 0글자 예외 테스트`() {
 		assertThrows<IllegalArgumentException> {
-			InputValidator.validateMember(listOf("chan", ""))
+			InputValidator.validateName(listOf("chan", ""))
 		}
 	}
 
