@@ -13,5 +13,5 @@ fun main() {
 		Car(name)
 	}
 
-	RacingCar.racingStart(cars, tryCount)
+	Racing.racingStart(cars, tryCount)
 }

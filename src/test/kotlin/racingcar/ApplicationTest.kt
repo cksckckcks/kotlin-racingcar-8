@@ -38,7 +38,7 @@ class ApplicationTest : NsTest() {
 
 		val cars = listOf(car, car2, car3)
 
-		RacingCar.racingStart(cars, 0)
+		Racing.racingStart(cars, 0)
 
 		assertThat(output()).isEqualTo("최종 우승자 : chan")
 	}
@@ -55,7 +55,7 @@ class ApplicationTest : NsTest() {
 
 		val cars = listOf(car, car2, car3)
 
-		RacingCar.racingStart(cars, 0)
+		Racing.racingStart(cars, 0)
 
 		assertThat(output()).isEqualTo("최종 우승자 : chan, cks")
 	}

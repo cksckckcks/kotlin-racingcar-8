@@ -2,7 +2,7 @@ package racingcar
 
 import camp.nextstep.edu.missionutils.Randoms.pickNumberInRange
 
-object RacingCar {
+object Racing {
 	private const val RANDOM_START_NUMBER = 0
 	private const val RANDOM_END_NUMBER = 9
 	private const val MIN_MOVE_VALUE = 4
